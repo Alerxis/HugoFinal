@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col s12 m3 l4">
+
+    </div>
+
+    <div class="col s12 m6 l4 center">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12">
+                        <h6>Ingrese los datos para completar su registro</h6>
+                    </div>
+
+                    <form #signUpForm="ngForm" class="col s12">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="signup_name" type="text" maxlength="100" name="name" #name="ngModel"[(ngModel)]="authService.user.name">
+                            <label for="signup_name">Nombre completo</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="signup_email" type="email" maxlength="50" name="email" #email="ngModel"[(ngModel)]="authService.user.email">
+                            <label for="signup_email">Correo</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="signup_password" type="password" maxlength="50" name="password" #password="ngModel"[(ngModel)]="authService.user.password">
+                            <label for="signup_password">Contraseña</label>
+                        </div>
+
+                        <div class="col s12">
+                            <br>
+                            <a (click)="signup(signUpForm)" class="btn-large black white-text" style="width: 90%;">Registrarme<i class="material-icons right">send</i></a>
+                        </div>
+
+                        <div class="col s12">
+                            <br>
+                            <b><a routerLinkActive="active" routerLink="/signin" class="blue-text">Da click para iniciar sesión</a></b>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m3 l4">
+
+    </div>
+</div>
